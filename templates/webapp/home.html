@@ -1,0 +1,456 @@
+{% extends "webapp/index.html" %}
+{% load static %}
+{% block home %}
+
+
+<!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header mb-5">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">rxcapital-f Now On</div>
+                <h1 class="display-4 text-white mb-4 animated slideInRight">TRADE THE MARKETS WITH THE BEST TRADING CONDITIONS
+                </h1>
+                <p class="text-white mb-4 animated slideInRight">CFDs on Forex, Commodities, Bonds, Metals, Energies, Shares, Indices and more with 1:1000 leverage, ultra-fast execution, quick deposits & withdrawals and swap free accounts.
+                </p>
+                <!-- <a href="https://www.rxcapital-f/clientapp/signup" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Signup</a>
+                <a href="https://www.rxcapital-f/clientapp/login" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Login</a> -->
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="{%static 'web/mt.jpg'%}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-light p-3"
+                        placeholder="Type search keyword">
+                    <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Full Screen Search End -->
+
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div>
+                    <img class="img-fluid w-100" src="{%static 'web/why.jpeg'%}">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div>
+                <h1 class="mb-4">Why Traders choose rxcapital-f</h1>
+                <p class="mb-4">Joining rxcapital-f can be done in just 3 simple steps! Experience a custom trading environment as well as award-winning trading execution with best-of-market spreads on more than 200 trading instruments, starting from just 0 pips. Gain direct access and trade through 10 market-leading trading platforms: the tailored rxcapital-f , the rxcapital-f Personal Multi-Account Manager (PMAM) the rxcapital-f Multi Terminal and the web -based social trading platform. For those on the go without access to the internet, our live operators are standing by to help you place orders or even give you an update on the markets. Satisfaction Guaranteed.</p>
+                <p class="mb-4">We built Raforex because we thought trading was too exciting to be kept for the few. Traders ourselves, we saw how the emerging web could bring opportunity to anyone who was ready to take on a little risk and put in the time to learn. We set out three rules to guide our mission to take opportunity to the world.</p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>TRADE CONVENIENTLY
+                        </h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>HIGH TECH SECURITY
+                        </h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>RELIABILITY
+                        </h6>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                    <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Service Start -->
+<div class="container-fluid bg-light mt-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
+                <h1 class="mb-4">We live and breathe the markets. Since 2023, we've educated traders to help them learn about the markets.</h1>
+                <p class="mb-4">Automate and elevate your trading with our easy-to-use, data-driven suite of impressive AI tools.
+
+                </p>
+                <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-robot fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Countless opportunities
+                                    </h5>
+                                    <p>Make the most of market moves. Access hundreds of instruments across FX, indices, commodities and stocks.</p>
+                                    <!-- <a class="btn px-3 mt-auto mx-auto" href="">Read More</a> -->
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-power-off fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Exceptional value
+                                    </h5>
+                                    <p>Keep more of your returns. Trade your favourite assets with super-tight spreads, low commissions and pinpoint execution.
+
+                                    </p>
+                                    <!-- <a class="btn px-3 mt-auto mx-auto" href="">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-md-4">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-graduation-cap fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">First-class education
+                                    </h5>
+                                    <p>Knowledge is power. Pick up the skills you need to succeed with our free online resources.
+
+                                    </p>
+                                    <!-- <a class="btn px-3 mt-auto mx-auto" href="">Read More</a> -->
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-brain fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Total fund security
+                                    </h5>
+                                    <p>Trade with peace of mind. Your funds are fully segregated from our own and insured up to $1m.
+
+                                    </p>
+                                    <!-- <a class="btn px-3 mt-auto mx-auto" href="">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Feature Start -->
+<div class="container-fluid bg-primary feature pt-5">
+    <div class="container pt-5">
+        <div class="row g-5">
+            <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
+                <h1 class="text-white mb-4">We're Best in AI Industry with 10 Years of Experience</h1>
+                <p class="text-light mb-4">Joining rxcapital-f can be done in just 3 simple steps! Experience a custom trading environment as well as award-winning trading execution with best-of-market spreads on more than 200 trading instruments, starting from just 0 pips. Gain direct access and trade through 10 market-leading trading platforms: the tailored rxcapital-f , the rxcapital-f Personal Multi-Account Manager (PMAM) the rxcapital-f Multi Terminal and the web -based social trading platform. For those on the go without access to the internet, our live operators are standing by to help you place orders or even give you an update on the markets. Satisfaction Guaranteed.</p>
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span>Best-of-market spreads from 0 pips.</span>
+                </div>
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span>Instant execution with no slippage or delay.</span>
+                </div>
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span>In-House developed ' One Account, 4 Platforms' trading functionality.</span>
+                </div>
+            
+                <div class="d-flex align-items-center text-white mb-3">
+                    <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span>                    Over 200 trading instruments to trade Forex, CFDs on shares, commodities and spot metals.
+                    </span>
+                </div>
+            
+
+
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
+                <img class="img-fluid" src="{%static 'web/Robot.png'%}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">instruments</div>
+            <h1 class="mb-4">rxcapital-f IS COMMITTED TO INTEGRITY & INNOVATION
+            </h1>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                <div class="tradingview-widget-container" style="width: 100%; height:650px;">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+                    {
+                  
+                    "currencies": [
+                      "EUR",
+                      "USD",
+                      "JPY",
+                      "GBP",
+                      "CHF",
+                      "AUD",
+                      "CAD",
+                      "NZD",
+                      "CNY"
+                    ],
+                    "isTransparent": false,
+                    "colorTheme": "light",
+                    "locale": "en"
+                  }
+                    </script>
+                  </div>
+            </div>
+        </div>
+   </div>
+</div>                
+
+
+
+<!-- FAQs Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
+            <h1 class="mb-4">Frequently Asked Questions</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="accordion" id="accordionFAQ1">
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Optimized Buisness Model
+
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body">
+                                We have an optimized and effective business model with a high factor of sustainability in various market conditions.                                </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Expertise and Knolwedge
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body">
+                                Our team has extensive knowledge of and a great deal of expertise in Forex and CFD markets, in trading and in the brokerage business.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Internal Policies
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body">
+                                We have an extensive range of internal policies and procedures to ensure high standards in relation to our business processes and staff activity.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                AML and KYC Policies
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body">
+                                We employ strict AML and KYC policies to support international efforts against money laundering and inappropriate usage of funds.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion" id="accordionFAQ2">
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                High Standards of Security
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body">
+                                We pay close attention to the security of our clients’ data, funds, trading activity and monetary transactions. We use and comply with the highest standards of security in both financial and IT industries.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Risk Management Policy
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body">
+                                We have an extremely conservative risk management policy based on many years of work and in-depth knowledge of the market.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Organized Funds
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body">
+                                We keep client funds and company money separate. Our cash flows are organized in such a way that company expenditure cannot even be processed from accounts with client money.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.8s">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Micro Accounts
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                            data-bs-parent="#accordionFAQ2">
+                            <div class="accordion-body">
+                                We deploy a full-NDD model that ensures you will never experience any dealing manipulation. Moreover, all our accounts except for the Micro accounts are STP/ECN. Micro accounts are intended for educational and testing purposes and have a low maximum balance. Thus, in order to comply with our risk management policy, the risks are tightly controlled.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQs Start -->
+
+
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Testimonial</div>
+                <h1 class="mb-4">What Say Our Clients!</h1>
+                <p class="mb-4">This website offers everything you need for Forex trading – from market news and analysis to real-time price updates. The tools provided have really improved my trading strategies!</p>
+                <!-- <a class="btn btn-primary rounded-pill px-4" href="">Read More</a> -->
+            </div>
+            <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel border-start border-primary">
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">
+                            Whether you're a beginner or a seasoned trader, this site makes everything simple to navigate. The tutorials and analysis are clear and insightful, making Forex trading much more approachable                        </p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="{%static 'web/img/testimonial-1.jpg'%}"
+                                style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Senthil</h5>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">
+                            I had a few questions when I started, and the customer support team was quick to respond and very helpful. It’s great to have that level of support when learning about Forex markets!
+
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="{%static 'web/img/testimonial-2.jpg'%}"
+                                style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Adrin G</h5>
+                                <!-- <span>Profession</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">
+                            The real-time data on this website is a game-changer. The accuracy and depth of analysis have helped me make informed trading decisions. Highly recommended for serious traders.                        </p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="{%static 'web/img/testimonial-3.jpg'%}"
+                                style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Simon</h5>
+                                <!-- <span>Profession</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+{% endblock %}

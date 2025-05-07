@@ -1,0 +1,327 @@
+{% extends "webapp/index.html" %}
+{% load static %}
+
+{% block home %}
+<style>
+    .app {
+        width: 88px;
+        height: 128px;
+    }
+
+    .card-hover-text {
+        display: none;
+    }
+
+    .card:hover .card-text {
+        display: none;
+    }
+
+    .card:hover .card-hover-text {
+        display: block;
+    }
+
+    .card-b {
+        border-radius: 20px;
+    }
+
+    .gray-box {
+        background: #F4F4F4;
+        text-align: center;
+        padding: 120px 50px 75px 50px;
+        width: 400px;
+
+    }
+
+    .gray-box:hover {
+        background: #e6e9f0;
+
+
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .timeline-start {
+        border-top: solid 1px #B9B7B7;
+    }
+
+    .timeline-edge {
+        width: 50px;
+    }
+
+    .content {
+        border-top: solid 1px #B9B7B7;
+        padding: 50px 0;
+        text-align: left;
+    }
+
+    .fa-ul {
+        margin-left: var(--fa-li-margin, 2em);
+    }
+
+    .fa-ul {
+        list-style-type: none;
+        margin-left: var(--fa-li-margin, 2.5em);
+        padding-left: 0;
+    }
+
+    .fa-ul>li {
+        position: relative;
+    }
+
+    .content {
+        border-top: solid 1px #B9B7B7;
+        padding: 50px 0;
+        text-align: left;
+    }
+
+    .timeline-curve-right {
+        border: solid 1px #B9B7B7;
+        border-width: 1px 1px 1px 0;
+        border-radius: 0 50px 50px 0;
+        margin-bottom: -1px;
+    }
+
+    .timeline-curve-left {
+        border: solid 1px #B9B7B7;
+        border-width: 1px 0 1px 1px;
+        border-radius: 50px 0 0 50px;
+        margin-bottom: -1px;
+    }
+
+    .arrow-icon-start {
+        width: 15px;
+        position: absolute;
+        margin-top: -59px;
+        text-align: center;
+        left: 30%;
+    }
+
+    .arrow-icon-end {
+        width: 15px;
+        position: absolute;
+        margin-top: -59px;
+        text-align: center;
+        right: 35%;
+    }
+
+    .timeline-end {
+        border-bottom: solid 1px #B9B7B7;
+        margin-bottom: -1px;
+    }
+
+    .fa-arrow-right-long:before,
+    .fa-long-arrow-right:before {
+        content: "\f178";
+    }
+
+    span {
+        color:#02765a !important;
+    }
+    .text-warning{
+        color:#02765a !important;
+    }
+
+    .card-bg {
+        background-color: #5df3ce  !important;
+        padding: 120px 50px 75px 50px;
+        margin-left: 10px;
+        /* width: 100% */
+        ;
+    }
+
+    .card-bg:hover {
+        background-color: #111827;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .gray-box {
+            width: 100%;
+        }
+
+        .card-bg {
+            margin-left: auto;
+        }
+    }
+</style>
+<style>
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+.icon-circle i {
+    font-size: 30px;
+    color: #4a90e2;
+}
+.feature-box {
+    text-align: center;
+    background: #fff;
+    border-top: 5px solid #34dbb3;
+    margin: 30px 15px 10px;
+    padding: 40px;
+    height: 300px;
+}
+.feature-box h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.feature-box p {
+    color: #555;
+}
+</style>
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="{%url 'home'%}">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="static/web/mt.png" alt="" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row p-1 bg-white  gy-4">
+            <div class="col-lg-5 col-md-5">
+                <h1 class="text-warning"><b> Welcome to Na1.online
+
+                         </b></h1>
+                <p class="text-justify" style="text-align: justify;">Welcome to Na1, an international online Forex and CFDs trading firm offering 24 hours access to a diverse range of trading products including forex currency pairs, commodities, futures, indices and stocks. Through Na1 and the world renowned MetaTrader 4 trading platform, you can take advantage of high liquidity, low spreads, mobile trading, technical analysis and even more.</p>
+                <p class="text-justify" style="text-align: justify;">
+                    We maintain high standards to keep trading environments secure, and offer the best tailor made trading conditions for every client. We help Forex traders to develop the knowledge and skills they need to trade efficiently and responsibly. With our Daily Market analysis, we bring the freshest market insights to our beloved clients every day. Experience it for yourself!                </p>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-info" href="https://www.na1.online/clientapp/signup" target="_blank" style="background-color: #34dbb3 !important;"> <b> WELCOME TO NA1</b></a>
+
+                    </div>
+            </div>
+            <div class="col-lg-7 col-md-7">
+                <img src="/static/web/map.svg" class="img-fluid w-100" />
+
+            </div>
+
+        </div>
+        <div class="row">
+            <img src="https://www.na1.online/static/nac.png" alt="Your Image" oncontextmenu="return false;">
+            <script>
+                // Disable right-click context menu globally
+                document.addEventListener('contextmenu', function(event) {
+                    event.preventDefault();
+                });
+            </script>
+        </div>
+
+
+  
+    </div>
+
+ 
+
+</section>
+
+<div class="container-fluid p-3" style="background-color: #f4f4f4;">
+    <h2 class="text-center mb-4 ">WHY CHOOSE Na1?</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="icon-circle">
+                    <i class="bi bi-people"></i>
+                </div>
+                <p>Our team is comprised of industry experts who are driven to consistently improve the trading experience through innovation.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="icon-circle">
+                    <i class="bi bi-graph-up"></i>
+                </div>
+                <p>Smart Account - The only 1 trading account type for ease of your experience with us.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="icon-circle">
+                    <i class="bi bi-file-earmark"></i>
+                </div>
+                <p>Licensed and Regulated. We respect and abide by the industry standards and regulations.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="feature-box feature-box-border-top">
+                <div class="icon-circle">
+                    <i class="bi bi-stopwatch"></i>
+                </div>
+                <p>Instant account opening and funding. Simple registration form and fast verification.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box feature-box-border-top">
+                <div class="icon-circle">
+                   <span  style="color:#4a90e2;font-size: 30px;">0$</span> 
+                </div>
+                <p><strong>Zero deposit fees.</strong> We don't charge any commissions or fees on your deposits and withdrawals.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box feature-box-border-top">
+                <div class="icon-circle">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <p>24/5 Support with your own Relationship Manager. Anytime, Anywhere.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<br>
+
+
+
+    {% endblock %}

@@ -1,0 +1,396 @@
+{% extends "webapp/index.html" %}
+
+{% block home %}
+
+<style>
+    
+    .float-endk{
+      float: right;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .gray-box {
+            width: 100%;
+        }
+
+        .card-bg {
+            margin-left: auto;
+        }
+        .float-endk{
+      float: none;
+      
+    }
+    .btnk{
+      text-align: center;
+    }
+    .bt{
+      margin-top:10px
+    }
+    .btn-warning{
+      width: 100%;
+    }
+    .ck{
+      margin-top: 20px;
+    }
+    }
+</style>
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Account Type</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="{%url 'home'%}">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Account Type</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="static/web/mt.png" alt="" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container pt-5">
+   
+
+        <div class="row g-4">
+      
+            <div class="col-md-6 wow fadeInUp">
+              <div class="card border-company bg-dark mx-sm-1 p-4">
+               
+                <!-- <div class="card border-company shadow text-info p-3 my-card" style="left:50%;"><i class="fa fa-server text-primary"
+                    aria-hidden="true"></i>
+                </div> -->
+                <div class=" text-center">
+                  <h4 class="text-white">Basic</h4>
+                </div>
+                <div class="row mt-2">
+                
+                  <table class="table-bordered text-white text-uppercase">
+                    <tr class="text-center">
+                      <td>MINIMUM DEPOSIT</td>
+                      <td>10$</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>Trading platform</td>
+                      <td>MT4</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> ORDER</td>
+                      <td>FAST EXECUTION</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>LEVERAGE</td>
+                      <td>1:500</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>SPREAD</td>
+                      <td>YES</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>COMMISSION </td>
+                      <td>YES</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>SWAP CHARGE </td>
+                      <td>YES</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>HEDGING  </td>
+                      <td>YES</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" class="p-2 btnk">
+                        <a class="btn btn-warning" href="https://www.na1.online/clientapp/signup">
+                            OPEN LIVE ACCOUNT
+                        </a>
+                        <span class="float-endk">
+                        <a claa="text-center" href="https://www.na1.online/clientapp/signup" class="btn btn-warning bt">
+                          OPEN DEMO ACCOUNT
+                      </a></span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+             
+      
+              </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp">
+              <div class="card border-company bg-dark mx-sm-1 p-4" style="left:50;">
+                <!-- <div class="card border-company shadow text-info p-3 my-card"><i class="fa fa-server  text-primary"
+                    aria-hidden="true"></i>
+                </div> -->
+                <div class=" text-center">
+                  <h4 class="text-white">Premium </h4>
+                </div>
+      
+                <div class="row mt-2">
+                
+                  <table class="table-bordered text-white">
+                    <tr class="text-center">
+                      <td>MINIMUM DEPOSIT</td>
+                      <td>300$</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>Trading platform</td>
+                      <td>MT4</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> ORDER</td>
+                      <td>FAST EXECUTION</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>LEVERAGE</td>
+                      <td>1:700.</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>SPREAD</td>
+                      <td>YES</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>COMMISSION </td>
+                      <td>YES</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>SWAP CHARGE </td>
+                      <td>NO</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>HEDGING  </td>
+                      <td>YES</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" class="p-2 btnk">
+                        <a class="btn btn-warning" href="https://www.na1.online/clientapp/signup">
+                            OPEN LIVE ACCOUNT
+                        </a>
+                        <span class="float-endk">
+                        <a claa="text-center" href="https://www.na1.online/clientapp/signup" class="btn btn-warning bt">
+                          OPEN DEMO ACCOUNT
+                      </a></span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+      
+              
+      
+              </div>
+            </div>
+          </div>  
+      
+            <div class="row g-4 mt-lg-3 mt-md-3">
+      
+
+
+              <div class="d-lg-flex d-md-flex justify-content-center g-4 mt-lg-3 mt-md-3">
+      
+                <div class="col-md-6 wow fadeInUp">
+                  <div class="card border-company bg-dark mx-sm-1 p-4 ck">
+                   
+                    <!-- <div class="card border-company shadow text-info p-3 my-card" style="left:50%;"><i class="fa fa-server text-primary"
+                        aria-hidden="true"></i>
+                    </div> -->
+                    <div class=" text-center">
+                      <h4 class="text-white">Standard</h4>
+                    </div>
+                    <div class="row mt-2">
+                    
+                      <table class="table-bordered text-white">
+                        <tr class="text-center">
+                          <td>MINIMUM DEPOSIT</td>
+                          <td>1000$</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>Trading platform</td>
+                          <td>MT4</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td> ORDER</td>
+                          <td>FAST EXECUTION</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>LEVERAGE</td>
+                          <td>1:800</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>SPREAD</td>
+                          <td>YES</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>COMMISSION </td>
+                          <td>NO</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>SWAP CHARGE </td>
+                          <td>YES</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>HEDGING  </td>
+                          <td>YES</td>
+                        </tr>
+                        <tr >
+                          <td colspan="12" class="p-2 btnk">
+                            <a  class="btn btn-warning" href="https://www.na1.online/clientapp/signup">
+                                OPEN LIVE ACCOUNT
+                            </a>
+                            <span class="float-endk">
+                            <a claa="text-center" href="https://www.na1.online/clientapp/signup" class="btn btn-warning bt">
+                              OPEN DEMO ACCOUNT
+                          </a></span>
+                          </td>
+                        </tr>
+                    
+                      </table>
+                    </div>
+                 
+          
+                  </div>
+                </div>
+             
+          
+              </div>
+
+        
+              <div class="col-md-6 wow fadeInUp">
+                <div class="card border-company bg-dark mx-sm-1 p-4 ck">
+                 
+                  <!-- <div class="card border-company shadow text-info p-3 my-card" style="left:50%;"><i class="fa fa-server text-primary"
+                      aria-hidden="true"></i>
+                  </div> -->
+                  <div class=" text-center">
+                    <h4 class="text-white">VIP</h4>
+                  </div>
+                  <div class="row mt-2">
+                  
+                    <table class="table-bordered text-white">
+                      <tr class="text-center">
+                        <td>MINIMUM DEPOSIT</td>
+                        <td>1000$</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>Trading platform</td>
+                        <td>MT4</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td> ORDER</td>
+                        <td>FAST EXECUTION</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>LEVERAGE</td>
+                        <td>1:800</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>SPREAD</td>
+                        <td>YES</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>COMMISSION </td>
+                        <td>NO</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>SWAP CHARGE </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>HEDGING  </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr >
+                        <td colspan="12" class="p-2 btnk">
+                          <a class="btn btn-warning" href="https://www.na1.online/clientapp/signup">
+                              OPEN LIVE ACCOUNT
+                          </a>
+                          <span class="float-endk">
+                          <a claa="text-center" href="https://www.na1.online/clientapp/signup" class="btn btn-warning bt">
+                            OPEN DEMO ACCOUNT
+                        </a></span>
+                        </td>
+                      </tr>
+                  
+                    </table>
+                  </div>
+               
+        
+                </div>
+              </div>
+
+              
+              <div class="col-md-6 wow fadeInUp">
+                <div class="card border-company bg-dark mx-sm-1 p-4" style="left:50;">
+                  <!-- <div class="card border-company shadow text-info p-3 my-card"><i class="fa fa-server  text-primary"
+                      aria-hidden="true"></i>
+                  </div> -->
+                  <div class=" text-center">
+                    <h4 class="text-white">Funding Program</h4>
+                  </div>
+        
+                  <div class="row mt-2">
+                  
+                    <table class="table-bordered text-white">
+                      <tr class="text-center">
+                        <td>MINIMUM DEPOSIT</td>
+                        <td>100$</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>Trading platform</td>
+                        <td>MT4</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td> ORDER</td>
+                        <td>FAST EXECUTION</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>LEVERAGE</td>
+                        <td>1:400.</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>RAW SPREAD</td>
+                        <td>YES</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>COMMISSION </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>SWAP CHARGE </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td>HEDGING  </td>
+                        <td>YES</td>
+                      </tr>
+                      <tr>
+                        <td colspan="12" class="p-2 btnk">
+                          <a class="btn btn-warning" href="https://www.na1.online/clientapp/signup">
+                              OPEN LIVE ACCOUNT
+                          </a>
+                          <span class="float-endk">
+                          <a claa="text-center" href="https://www.na1.online/clientapp/signup" class="btn btn-warning bt">
+                            OPEN DEMO ACCOUNT
+                        </a></span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+        
+                
+        
+                </div>
+              </div>
+            
+            </div>
+      
+            
+
+    </div>
+    <!-- Hero End -->
+
+
+{% endblock %}    
