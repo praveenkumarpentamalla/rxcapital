@@ -25,7 +25,7 @@ SECRET_KEY = 'r!gdf6q%kkk!q$ea-5axt54oj&zae5myhsq$zfn&r355(16=l1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.95.17.193', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 import os
 
 # Application definition
