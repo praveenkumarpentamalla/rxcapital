@@ -28,6 +28,9 @@ jobs:
     steps:
       # Checkout repo
       - uses: actions/checkout@v4
+        with:
+          # Fetch all history for GitLeaks to work properly
+          fetch-depth: 0
 
       # Set up Python
       - name: Set up Python
@@ -41,6 +44,40 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # ---- DATA LEAKAGE DETECTION ----
+      # GitGuardian for secrets detection
+      - name: GitGuardian Scan
+        uses: GitGuardian/gg-shield-action@master
+        with:
+          show_secrets: false  # Set to true for detailed output (use with caution)
+        env:
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
+      # Gitleaks for secrets detection
+      - name: Gitleaks Scan
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          config-path: .gitleaks.toml  # Optional custom config
+          redact: true  # Redact secrets from logs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # TruffleHog for high-entropy secrets detection
+      - name: TruffleHog Scan
+        uses: trufflesecurity/trufflehog@main
+        with:
+          args: --no-update github.com/${{ github.repository }} --only-verified
+        continue-on-error: true  # Continue even if secrets found
+
+      # Detect-secrets for proactive prevention
+      - name: Detect-secrets Scan
+        run: |
+          pip install detect-secrets
+          detect-secrets scan --baseline .secrets.baseline 2>/dev/null || \
+          (echo "No baseline found, creating one" && detect-secrets scan --init)
+          detect-secrets audit .secrets.baseline
+        continue-on-error: true
 
       # Run Django tests
       - name: Run Django tests
