@@ -59,11 +59,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Snyk (SCA)
+      # Snyk (SCA - dependency scan for Python)
       - name: Snyk Security Scan
         uses: snyk/actions/python@master
         with:
-          args: test
+          args: test --file=requirements.txt --package-manager=pip
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
