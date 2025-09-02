@@ -92,3 +92,15 @@ jobs:
         with:
           target: 'http://localhost:8035'
           cmd_options: '-a'
+          allow_issue_writing: false
+        continue-on-error: true
+
+      # Save ZAP Reports as artifact
+      - name: Upload ZAP Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: zap-scan-reports
+          path: |
+            report.html
+            zap.out
+            *.log
