@@ -52,7 +52,7 @@ jobs:
       # ---- Security Scans ----
       # SonarCloud (SAST + Code quality)
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarcloud-github-action@main
         with:
           projectBaseDir: .
         env:
