@@ -6,6 +6,8 @@ metadata:
   # Example for optional annotations
   annotations:
     github.com/project-slug: praveenkumarpentamalla/rxcapital   # git user name / repo name
+    backstage.io/techdocs-ref: dir:.
+
 spec:
   type: service
   owner: development
