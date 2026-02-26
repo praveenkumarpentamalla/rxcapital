@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Python-app  # You can any name here
+  description: Pthon application.
+  # Example for optional annotations
+  annotations:
+    github.com/project-slug: praveenkumarpentamalla/rxcapital   # git user name / repo name
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental
