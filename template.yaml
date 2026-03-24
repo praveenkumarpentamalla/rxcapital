@@ -1,4 +1,4 @@
-piVersion: scaffolder.backstage.io/v1beta3
+apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: python-template
@@ -44,7 +44,6 @@ spec:
         allowedHosts:
           - github.com
         description: This is ${{ parameters.component_id }}
-        # repoUrl: github.com?owner=ricardoandre-97&repo=${{parameters.component_id}}
         repoUrl: github.com?owner=praveenkumarpentamalla&repo=${{parameters.component_id}}
         protectDefaultBranch: false
         repoVisibility: public
